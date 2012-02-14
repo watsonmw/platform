@@ -13,13 +13,16 @@ lib/
 # Matrix Example
 examples/Matrix/Debug/
 examples/Matrix/Release/
+examples/Matrix/log.txt
 
 # PhotoViewer Example
 examples/PhotoViewer/Debug/
 examples/PhotoViewer/Release/
 examples/PhotoViewer/Runner/Debug/
 examples/PhotoViewer/Runner/Release/
+examples/PhotoViewer/log.txt
 
 # TerrainDemo Example
 examples/TerrainDemo/Debug/
 examples/TerrainDemo/Release/
+examples/TerrainDemo/log.txt
