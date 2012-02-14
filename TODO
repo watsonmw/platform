@@ -1,0 +1,9 @@
+ToDo:
+- Change all logging & strings to UTF8?
+- Add Timer class?
+- File reader wrapper
+- FileList doesnt follow links
+- Better Image handling in the core library.
+-- ImageLoader should be able to read bitmap image from resource file
+-- File loading and image type should no be tied together
+-- Color class/struct!

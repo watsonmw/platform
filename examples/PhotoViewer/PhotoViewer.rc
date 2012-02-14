@@ -1,0 +1,96 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    "PHOTOVIEWERSETUP", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 335
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+PHOTOVIEWERSETUP DIALOGEX 0, 0, 342, 100
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "PhotoViewer Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDC_OK,285,7,50,14
+    PUSHBUTTON      "&Cancel",IDC_CANCEL,285,25,50,14
+    PUSHBUTTON      "Browse...",IDC_BROWSE,217,36,49,15
+    GROUPBOX        "Pictures Folder",IDC_STATIC,7,7,268,51
+    PUSHBUTTON      "&Defaults",IDC_DEFAULT,217,72,50,15
+    COMBOBOX        IDC_PICTURES_PATH,14,17,253,130,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Skip Small Images",IDC_SKIP_SMALL_IMAGES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,74,74,10
+    EDITTEXT        IDC_WAIT_NUM,128,73,25,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "seconds",IDC_STATIC,165,75,27,8
+    LTEXT           "Wait:",IDC_STATIC,107,75,18,8
+    CONTROL         "",IDC_WAIT_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,151,73,12,
+                    13
+    PUSHBUTTON      "&About",IDC_ABOUT,285,44,50,14
+    GROUPBOX        "Settings",IDC_STATIC,7,60,268,32
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PHOTOVIEWER         ICON                    "PhotoViewer.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
