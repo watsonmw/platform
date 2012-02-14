@@ -15,7 +15,7 @@ namespace Platform
     {
         if (sBasePath.empty()) {
             sBasePath = Win32::getExecutableDir() + L"\\Data\\";
-		}
+        }
 
         return sBasePath;
     }
@@ -27,15 +27,15 @@ namespace Platform
 
     wstring AppUtils::removeWhiteSpace(const wstring &str)
     {
-        wstring striped_string;
+        wstring strippedString;
 
         for (wstring::const_iterator i = str.begin(); i < str.end(); i++) {
             if (*i != ' ' && *i != '\t' &&
-                    *i != '\n' && *i != '\r') {
-                striped_string += *i;
-			}
+                *i != '\n' && *i != '\r') {
+                strippedString += *i;
+            }
         }
 
-        return striped_string;
+        return strippedString;
     }
 };

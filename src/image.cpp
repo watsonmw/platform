@@ -92,9 +92,9 @@ namespace Platform
 
             if (_pixelFormat == RGBA) {
                 alpha = _data[pixelIndex+3];
-		    } else {
+            } else {
                 alpha = 255;
-		    }
+            }
         }
     }
 };

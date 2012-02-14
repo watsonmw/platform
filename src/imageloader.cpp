@@ -30,13 +30,13 @@ namespace Platform
             image = new TGAImage();
             image->setPixelFormat(pixelFormat);
             image->load(filePath);
-		}
+        }
         else if (fileType == L"pcx") {
             PCXImage pcxImage;
             if (pcxImage.load(filePath)) {
                 image = pcxImage.convert(pixelFormat);
             }
-		}
+        }
         else {
             Log::printf(L"Unknown image file type: \'%s\'", fileType.c_str());
             return NULL;

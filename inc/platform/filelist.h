@@ -20,25 +20,25 @@ public:
      */
     std::wstring getNextFilePath();
 
-	/**
-	 * Reset cursor
-	 */
+    /**
+     * Reset cursor
+     */
     void reset();
 
     /**
-	 * Debug function to list all files in the directory tree
+     * Debug function to list all files in the directory tree
      */
     void printAllFiles();
 
-	/**
-	 * Skip to specific file in the directory listing, and continue
-	 * listing from there.
-	 */
+    /**
+     * Skip to specific file in the directory listing, and continue
+     * listing from there.
+     */
     bool setCurrentFile(const std::wstring &file);
 
-	/**
-	 * Return the base directory that we are listing.
-	 */
+    /**
+     * Return the base directory that we are listing.
+     */
     std::wstring getBaseDirectory() const;
 
 private:

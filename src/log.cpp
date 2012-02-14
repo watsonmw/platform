@@ -19,7 +19,7 @@ Platform::Log::Log()
 
     if (_file != NULL) {
         fclose(_file);
-	}
+    }
 }
 
 Platform::Log::~Log()

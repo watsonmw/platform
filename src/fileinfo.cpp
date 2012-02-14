@@ -13,10 +13,10 @@ Platform::FileInfo::FileInfo(const std::wstring &fileName)
 
         if (fileInfo.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) {
             _bDirectory = true;
-		}
-		else {
+        }
+        else {
             _bDirectory = false;
-		}
+        }
     }
     else {
         _bPathExists = false;
@@ -70,7 +70,7 @@ bool Platform::FileInfo::isWritable()
 
             if (INVALID_HANDLE_VALUE == hFile) {
                 return false;
-			}
+            }
 
             CloseHandle(hFile);
             DeleteFile(tmpFileName);
@@ -92,7 +92,7 @@ bool Platform::FileInfo::isWritable()
 
             if (INVALID_HANDLE_VALUE == hFile) {
                 return false;
-			}
+            }
 
             CloseHandle(hFile);
             return true;

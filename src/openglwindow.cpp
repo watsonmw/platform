@@ -15,7 +15,7 @@ using namespace std;
 static const int defaultWindowDepth = 32;
 
 Platform::OpenGLWindow::OpenGLWindow
-	(const wstring& name, Platform::EventHandler &eventHandler, int colorBits)
+    (const wstring& name, Platform::EventHandler &eventHandler, int colorBits)
   : Platform::Window(name, eventHandler),
     _bNewRenderingContext(false),
     _colorBits(colorBits),
@@ -27,7 +27,7 @@ Platform::OpenGLWindow::OpenGLWindow
         _colorBits != 24 ||
         _colorBits != 32) {
         _colorBits = DEFAULT_DISPLAY_DEPTH;
-	}
+    }
 }
 
 Platform::OpenGLWindow::~OpenGLWindow()
@@ -61,21 +61,21 @@ bool Platform::OpenGLWindow::openFullScreen(int width, int height)
 {
     if (!changeDisplayMode(width, height, _colorBits)) {
         return false;
-	}
+    }
 
     return Window::openFullScreen();
 }
 
 bool Platform::OpenGLWindow::createWindow
-	(HWND parent, int xPos, int yPos, int width, int height, WindowType windowType)
+    (HWND parent, int xPos, int yPos, int width, int height, WindowType windowType)
 {
     if (!Window::createWindow(parent, xPos, yPos, width, height, windowType)) {
         return false;
-	}
+    }
 
     if (!setupPixelFormalAndRenderContext()) {
         return false;
-	}
+    }
 
     return true;
 }
@@ -181,23 +181,23 @@ int Platform::OpenGLWindow::choosePixelFormat(HDC hdc, bool bUseAccelerationIfAv
         if ((pfd.dwFlags & essentialFlags)
                 != essentialFlags) {
             continue;
-		}
+        }
 
         if (pfd.iPixelType != PFD_TYPE_RGBA) {
             continue;
-		}
+        }
 
         if (pfd.iLayerType != PFD_MAIN_PLANE) {
             continue;
-		}
+        }
 
         if (pfd.cColorBits < color) {
             continue;
-		}
+        }
 
         if (color > colorBits) {
             continue;
-		}
+        }
 
         if (!bUseAccelerationIfAvailable) {
             if (mcd || icd)
@@ -212,19 +212,19 @@ int Platform::OpenGLWindow::choosePixelFormat(HDC hdc, bool bUseAccelerationIfAv
 
         if (icdAcceleration && soft) {
             continue;
-		}
+        }
 
         if (mcdAcceleration && icd) {
             continue;
-		}
+        }
 
         if (depth > pfd.cDepthBits) {
             continue;
-		}
+        }
 
         if (no_stereo && pfd.dwFlags & PFD_STEREO) {
             continue;
-		}
+        }
 
         bestFitSoFar = i;
         color = pfd.cColorBits;

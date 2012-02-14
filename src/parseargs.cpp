@@ -48,7 +48,7 @@ namespace Platform
 
             if (charactor == 0) {
                 break;
-			}
+            }
         }
 
         parseOptions();

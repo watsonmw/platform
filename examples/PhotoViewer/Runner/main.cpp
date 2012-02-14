@@ -44,7 +44,7 @@ int APIENTRY _tWinMain(HINSTANCE instance,
     ZeroMemory(&si, sizeof(si));
     si.cb = sizeof(si);
 
-	PROCESS_INFORMATION pi;
+    PROCESS_INFORMATION pi;
     ZeroMemory(&pi, sizeof(pi));
 
     wstring full_cmd_line = file + L" " + (TCHAR*)cmd_line;

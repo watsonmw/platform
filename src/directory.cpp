@@ -21,7 +21,7 @@ wstring Directory::getNextFileName()
     do {
         if (!readNextFileInfo()) {
             return L"";
-		}
+        }
     } while (_fileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY);
 
     return getFullPath(_fileData.cFileName);
@@ -31,7 +31,7 @@ void Directory::reset()
 {
     if (_bFoundFirstFile) {
         FindClose(_searchHandle);
-	}
+    }
 
     _bFoundFirstFile = false;
 }
@@ -41,16 +41,16 @@ Directory *Directory::getNextSubDirectory()
     while (true) {
         if (!readNextFileInfo()) {
             return NULL;
-		}
+        }
 
         if (_fileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) {
             if (wcscmp(_fileData.cFileName, L".") == 0) {
                 continue;
-			}
+            }
 
             if (wcscmp(_fileData.cFileName, L"..") == 0) {
                 continue;
-			}
+            }
 
             break;
         }
@@ -67,7 +67,7 @@ bool Directory::getSubDirectories(vector<Directory> &subDirectories)
     HANDLE searchHandle = FindFirstFile(searchDirectory.c_str(), &fileData);
     if (searchHandle == INVALID_HANDLE_VALUE) {
         return false;
-	}
+    }
 
     // Note: We ignore the first directory its just '.'
     // The second will be '..' so ignore that too
@@ -76,7 +76,7 @@ bool Directory::getSubDirectories(vector<Directory> &subDirectories)
     while (FindNextFile(searchHandle, &fileData)) {
         if (fileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) {
             subDirectories.push_back(Directory(getFullPath(fileData.cFileName)));
-		}
+        }
     }
 
     FindClose(searchHandle);
@@ -114,7 +114,7 @@ void Directory::listFiles()
         fileName = getNextFileName();
         if (fileName.empty()) {
             break;
-		}
+        }
         Log::print(fileName);
     }
 
@@ -130,7 +130,7 @@ bool Directory::readNextFileInfo()
         _searchHandle = FindFirstFile(searchDirectory.c_str(), &_fileData);
         if (_searchHandle == INVALID_HANDLE_VALUE) {
             return false;
-		}
+        }
 
         _bFoundFirstFile = true;
     }
@@ -138,7 +138,7 @@ bool Directory::readNextFileInfo()
         if (!FindNextFile(_searchHandle, &_fileData)) {
             if (GetLastError() == ERROR_NO_MORE_FILES) {
                 return false;
-			}
+            }
         }
     }
     return true;
@@ -155,8 +155,8 @@ bool Directory::setCurrentFile(const wstring &file)
         if (!(_fileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) {
             if (file == _fileData.cFileName) {
                 return true;
-			}
-		}
+            }
+        }
     }
 
     reset();
@@ -169,8 +169,8 @@ bool Directory::setCurrentSubDirectory(const wstring &subDirectory)
         if ((_fileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) {
             if (subDirectory == _fileData.cFileName) {
                 return true;
-			}
-		}
+            }
+        }
     }
 
     reset();

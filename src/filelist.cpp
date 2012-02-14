@@ -39,7 +39,7 @@ void FileList::printAllFiles()
         filePath = getNextFilePath();
         if (filePath.empty()) {
             break;
-		}
+        }
         Log::print(filePath);
     }
 }
@@ -59,11 +59,11 @@ bool FileList::setCurrentFile(const wstring &current_file)
     wstring base_path = FilePath::cleanUpPath(_baseDirectory.getPath()) + L"\\";;
     if (current_file.find(base_path) != 0) {
         return false;
-	}
+    }
 
     if (base_path.length() == current_file.length()) {
         return false;
-	}
+    }
 
     vector<wstring> split_path;
     FilePath::splitFilePath(current_file.substr(base_path.length()), split_path);
@@ -84,7 +84,7 @@ bool FileList::setCurrentFile(const wstring &current_file)
         }
         else {
             return false;
-		}
+        }
     }
     return false;
 }

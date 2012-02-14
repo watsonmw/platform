@@ -25,7 +25,7 @@ namespace Platform
         HKEY application_key;
         if (openApplicationKey(application_key) != ERROR_SUCCESS) {
             return L"";
-		}
+        }
 
         DWORD data_type;
         const int BUFFER_SIZE = 1024;
@@ -43,7 +43,7 @@ namespace Platform
         if (error_code != ERROR_SUCCESS ||
                 (data_type != REG_SZ && data_type != REG_EXPAND_SZ)) {
             return L"";
-		}
+        }
 
         return wstring(data);
     }
@@ -71,7 +71,7 @@ namespace Platform
         HKEY application_key;
         if (openApplicationKey(application_key) != ERROR_SUCCESS) {
             return 0;
-		}
+        }
 
         DWORD data_type;
         DWORD data;
@@ -91,10 +91,10 @@ namespace Platform
 
         if (data == 0) {
             return false;
-		}
+        }
         else {
             return true;
-		}
+        }
     }
 
     int RegistrySettings::getInt(const wstring &setting)
@@ -102,7 +102,7 @@ namespace Platform
         HKEY application_key;
         if (openApplicationKey(application_key) != ERROR_SUCCESS) {
             return 0;
-		}
+        }
 
         DWORD data_type;
         DWORD data;
@@ -119,7 +119,7 @@ namespace Platform
         if (error_code != ERROR_SUCCESS ||
                 (data_type != REG_DWORD)) {
             return 0;
-		}
+        }
 
         return data;
     }
@@ -260,7 +260,7 @@ namespace Platform
         HKEY application_key;
         if (openApplicationKey(application_key) != ERROR_SUCCESS) {
             return;
-		}
+        }
 
         HKEY list_key;
         if (RegCreateKeyEx(application_key,
@@ -338,7 +338,7 @@ namespace Platform
         HKEY application_key;
         if (openApplicationKey(application_key) != ERROR_SUCCESS) {
             return false;
-		}
+        }
 
         HKEY key;
         bool keyExists = false;

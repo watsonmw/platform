@@ -13,7 +13,7 @@ static size_t findNextPathSeparator(const wstring &path, size_t base_path_end)
     size_t separator_pos = next_forward_slash;
     if (separator_pos > next_backward_slash) {
         separator_pos = next_backward_slash;
-	}
+    }
 
     return separator_pos;
 }
@@ -42,7 +42,7 @@ size_t FilePath::splitFilePath(const wstring &path, vector<wstring> &parts)
 
         if (!part_name.empty()) { // Can be empty at end of string
             parts.push_back(part_name);
-	    }
+        }
 
         start = end;
     }
