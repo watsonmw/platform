@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\application.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\apputils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\callbackeventhandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\directory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fileinfo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filelist.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filepath.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\image.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imageloader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openglwindow.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\parseargs.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pcximage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\registrysettings.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\screensaverapplication.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\settings.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tgaimage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\thread.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\win32.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\window.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\platform\eventhandler.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\fileinfo.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stdafx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\application.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\apputils.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\callbackeventhandler.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\directory.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\filelist.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\filepath.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\image.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\imageloader.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\log.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\openglwindow.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\parseargs.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\pcximage.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\registrysettings.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\screensaverapplication.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\settings.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\tgaimage.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\thread.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\win32.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\platform\window.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="TODO.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{3205a8a6-9c35-4abf-8c9d-0920a571e8d1}</UniqueIdentifier>
+      <Extensions>cpp</Extensions>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{cbf1bcc0-2131-40a3-ad94-0a9a57b14365}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+  </ItemGroup>
+</Project>
