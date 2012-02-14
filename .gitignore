@@ -1,0 +1,25 @@
+# Build output
+lib/
+*.pdb
+*.ilk
+*.scr
+
+# Visual Studio per user data
+*.suo
+*.user
+*.opensdf
+*.sdf
+
+# Matrix Example
+examples/Matrix/Debug/
+examples/Matrix/Release/
+
+# PhotoViewer Example
+examples/PhotoViewer/Debug/
+examples/PhotoViewer/Release/
+examples/PhotoViewer/Runner/Debug/
+examples/PhotoViewer/Runner/Release/
+
+# TerrainDemo Example
+examples/TerrainDemo/Debug/
+examples/TerrainDemo/Release/
